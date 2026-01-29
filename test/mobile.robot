@@ -5,10 +5,9 @@ Library           AppiumLibrary
 ${REMOTE_URL}     http://127.0.0.1:4723
 ${PLATFORM}       Android
 ${DEVICE_NAME}    emulator-5554
-${APP_PATH}       /Users/nugrohoarie/Documents/RND/ROBOT-MOBILE/apk/saucelabs.apk
+${APP_PATH}       ${CURDIR}/../apk/saucelabs.apk
 ${PACKAGE}        com.swaglabsmobileapp
 ${ACTIVITY}       com.swaglabsmobileapp.SplashActivity
-${ANDROID_SDK}    /Users/nugrohoarie/Library/Android/sdk
 
 *** Test Cases ***
 Buka Aplikasi Dan Klik Tombol
@@ -20,7 +19,6 @@ Buka Aplikasi Dan Klik Tombol
     ...                 appPackage=${PACKAGE}
     ...                 appActivity=${ACTIVITY}
     ...                 automationName=UiAutomator2
-    ...                 androidHome=${ANDROID_SDK}
     ...                 noReset=false
 
     Wait Until Element Is Visible    accessibility_id=test-Username    timeout=15s
