@@ -21,5 +21,3 @@ Klik Tombol Login
 Show Error Message
     Wait Until Element Is Visible    android=new UiSelector().text("Username and password do not match any user in this service.")    timeout=15s
     Capture Page Screenshot
-
-
