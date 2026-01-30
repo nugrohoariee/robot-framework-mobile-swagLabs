@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on win32)" generated="2026-01-30T16:07:50.650741" rpa="false" schemaversion="5">
+<suite id="s1" name="robot-framework-mobile-swagLabs" source="D:\RND\ROBOT-MOBILE\robot-framework-mobile-swagLabs">
+<suite id="s1-s1" name="Test" source="D:\RND\ROBOT-MOBILE\robot-framework-mobile-swagLabs\test">
+<suite id="s1-s1-s1" name="TC02-AddToCart" source="D:\RND\ROBOT-MOBILE\robot-framework-mobile-swagLabs\test\TC02-AddToCart.robot">
+<kw name="Load All Test Data" owner="common" type="SETUP">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2026-01-30T16:07:51.766259" level="INFO">${data_login} = {'validLogin': {'user_name': 'standard_user', 'password': 'secret_sauce'}, 'invalidLogin': {'user_name': 'mukti@nugrohoarie.cloud', 'password': 'SecurePassword123!'}}</msg>
+<var>${data_login}</var>
+<arg>${JSON_PATH}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2026-01-30T16:07:51.764546" elapsed="0.002194"/>
+</kw>
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2026-01-30T16:07:51.769771" level="INFO">${data_co} = {'COInfo': {'first_name': 'bambang', 'last_name': 'nugroho', 'zip_code': '12345'}}</msg>
+<var>${data_co}</var>
+<arg>${JSON_COINFO}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2026-01-30T16:07:51.767192" elapsed="0.003487"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-30T16:07:51.772838" level="INFO">${LOGIN_DATA} = {'validLogin': {'user_name': 'standard_user', 'password': 'secret_sauce'}, 'invalidLogin': {'user_name': 'mukti@nugrohoarie.cloud', 'password': 'SecurePassword123!'}}</msg>
+<arg>${LOGIN_DATA}</arg>
+<arg>${data_login}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-30T16:07:51.771260" elapsed="0.002385"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-30T16:07:51.775236" level="INFO">${CO_DATA} = {'COInfo': {'first_name': 'bambang', 'last_name': 'nugroho', 'zip_code': '12345'}}</msg>
+<arg>${CO_DATA}</arg>
+<arg>${data_co}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-30T16:07:51.774126" elapsed="0.001844"/>
+</kw>
+<status status="PASS" start="2026-01-30T16:07:51.763001" elapsed="0.013262"/>
+</kw>
+<test id="s1-s1-s1-t1" name="TC02001 - User dapat melihat produk dan dapat melakukan add to cart dan" line="12">
+<kw name="Start Appium Session" owner="common" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>app=${APP_PATH}</arg>
+<arg>appPackage=${PACKAGE}</arg>
+<arg>appActivity=${ACTIVITY}</arg>
+<arg>noReset=false</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-01-30T16:07:51.828589" elapsed="20.704118"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-30T16:08:12.550435" level="FAIL">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-30T16:08:12.544261" elapsed="0.028962">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</status>
+</kw>
+<msg time="2026-01-30T16:08:12.575463" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</msg>
+<msg time="2026-01-30T16:08:12.604688" level="FAIL">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-30T16:08:12.533145" elapsed="0.093043">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</status>
+</kw>
+<status status="FAIL" start="2026-01-30T16:07:51.823553" elapsed="20.804142">WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</status>
+</kw>
+<status status="FAIL" start="2026-01-30T16:07:51.776475" elapsed="20.852602">Setup failed:
+WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</status>
+</test>
+<status status="FAIL" start="2026-01-30T16:07:50.837734" elapsed="21.872751"/>
+</suite>
+<status status="FAIL" start="2026-01-30T16:07:50.824644" elapsed="21.970163"/>
+</suite>
+<status status="FAIL" start="2026-01-30T16:07:50.712919" elapsed="22.097357"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="robot-framework-mobile-swagLabs" id="s1" pass="0" fail="1" skip="0">robot-framework-mobile-swagLabs</stat>
+<stat name="Test" id="s1-s1" pass="0" fail="1" skip="0">robot-framework-mobile-swagLabs.Test</stat>
+<stat name="TC02-AddToCart" id="s1-s1-s1" pass="0" fail="1" skip="0">robot-framework-mobile-swagLabs.Test.TC02-AddToCart</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-30T16:08:12.575463" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\build\lib\jsonwp-proxy\proxy.js:310:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AndroidUiautomator2Driver.getScreenshot (C:\Users\User\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-driver\build\lib\commands\screenshot.js:72:19)</msg>
+</errors>
+</robot>
