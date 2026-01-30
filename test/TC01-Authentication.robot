@@ -37,5 +37,5 @@ TC01003 - User dapat melakukan logout
     Sleep    5s
     Klik Logout
     Capture Page Screenshot
-    # [Teardown]    Close Application
+    [Teardown]    Close Application
 

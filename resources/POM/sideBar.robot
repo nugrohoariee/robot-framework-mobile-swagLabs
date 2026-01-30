@@ -18,7 +18,25 @@ Klik Burger Menu
     click Element    ${BTN_SIDEBAR}      
 
 Klik Logout
-    # click Element    ${BTN_LOGOUT}      
-    # Click Element At Coordinates    119    1361
-    # Tap    None    119    1361
     Click Element    xpath=//*[contains(@text, 'LOGOUT')]
+
+Klik All Items
+    Click Element    xpath=//*[contains(@text, 'ALL ITEMS')]
+
+Klik Web View
+    Click Element    xpath=//*[contains(@text, 'WEBVIEW')]
+
+Klik QR Code Scanner
+    Click Element    xpath=//*[contains(@text, 'QR CODE SCANNER')]
+
+Klik Geo Location
+    Click Element    xpath=//*[contains(@text, 'GEO LOCATION')]
+
+Klik Drawing
+    Click Element    xpath=//*[contains(@text, 'DRAWING')]
+
+Klik About
+    Click Element    xpath=//*[contains(@text, 'ABOUT')]
+
+Klik Reset App State
+    Click Element    xpath=//*[contains(@text, 'RESET APP STATE')]
