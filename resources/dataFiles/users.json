@@ -1,0 +1,10 @@
+{
+    "validLogin": {
+        "user_name": "standard_user",
+        "password": "secret_sauce"
+    },
+    "invalidLogin": {
+        "user_name": "mukti@nugrohoarie.cloud",
+        "password": "SecurePassword123!"
+    }
+}
