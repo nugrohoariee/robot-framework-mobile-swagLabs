@@ -1,21 +1,17 @@
 *** Settings ***
 Resource          ${CURDIR}/../resources/POM/listProductPage.robot
-Resource          ${CURDIR}/../resources/POM/common.robot
+Resource          ${CURDIR}/../resources/utils/common.robot
 Resource          ${CURDIR}/../resources/POM/loginPage.robot
 Resource          ${CURDIR}/../resources/POM/cartPage.robot
 Resource          ${CURDIR}/../resources/POM/checkOutPage.robot
-Test Setup        Start Appium Session
+# Test Setup        Start Appium Session
 Suite Setup       Load All Test Data
 
 
 *** Test Cases ***
-TC02001 - User dapat melihat produk dan dapat melakukan add to cart dan
-    Wait Until Element Is Visible    accessibility_id=test-Username    timeout=15s
-    Isi Form Login    
-    ...    ${LOGIN_DATA['validLogin']['user_name']}
-    ...    ${LOGIN_DATA['validLogin']['password']}
+TC02001 - User dapat melihat produk dan dapat melakukan add to cart
+    [Setup]    Setup Login App    validLogin
     Capture Page Screenshot
-    Klik Tombol Login
     Klik Product
     Klik Cart
     Sleep    5s
@@ -27,7 +23,4 @@ TC02001 - User dapat melihat produk dan dapat melakukan add to cart dan
     ...    ${CO_DATA['COInfo']['zip_code']}
     Klik Continue
     Capture Page Screenshot
-    # [Teardown]    Close Application
-
-
-
+    [Teardown]    Close Application
