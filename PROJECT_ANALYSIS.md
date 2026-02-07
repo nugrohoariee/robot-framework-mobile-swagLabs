@@ -6,7 +6,7 @@ Project ini adalah **Framework Automation Testing Mobile** untuk aplikasi **Sauc
 
 ---
 
-## 📁 Struktur Project
+## Struktur Project
 
 ```
 robot-framework-mobile-swagLabs/
@@ -32,7 +32,7 @@ robot-framework-mobile-swagLabs/
 
 ---
 
-## ✅ Best Practices yang Sudah Diimplementasi
+## Best Practices yang Sudah Diimplementasi
 
 ### 1. **Page Object Model (POM) Pattern** 
 - Setiap halaman memiliki file `.robot` terpisah
