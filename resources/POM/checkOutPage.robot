@@ -1,6 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
-Resource    common.robot
+Resource    ${CURDIR}/../utils/common.robot
 
 *** Variables ***
 ${FIELD_FIRST_NAME}    //android.widget.EditText[@content-desc="test-First Name"]

@@ -1,6 +1,6 @@
 *** Settings ***
 Resource          ${CURDIR}/../resources/POM/loginPage.robot
-Resource          ${CURDIR}/../resources/POM/common.robot
+Resource          ${CURDIR}/../resources/utils/common.robot
 Resource          ${CURDIR}/../resources/POM/sideBar.robot
 Test Setup        Start Appium Session
 Suite Setup       Load All Test Data
