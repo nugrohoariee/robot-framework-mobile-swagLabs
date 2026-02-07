@@ -1,6 +1,8 @@
 import os
 import socket
 
+BASE_PATH = ""
+
 hostname = socket.gethostname()
 
 if hostname == "DESKTOP-4N88NFD":

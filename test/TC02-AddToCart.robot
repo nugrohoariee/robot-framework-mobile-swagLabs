@@ -1,10 +1,8 @@
 *** Settings ***
 Resource          ${CURDIR}/../resources/POM/listProductPage.robot
-Resource          ${CURDIR}/../resources/utils/common.robot
 Resource          ${CURDIR}/../resources/POM/loginPage.robot
 Resource          ${CURDIR}/../resources/POM/cartPage.robot
 Resource          ${CURDIR}/../resources/POM/checkOutPage.robot
-# Test Setup        Start Appium Session
 Suite Setup       Load All Test Data
 
 
