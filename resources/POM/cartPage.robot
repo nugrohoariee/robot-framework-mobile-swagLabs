@@ -2,7 +2,7 @@
 Library    AppiumLibrary
 
 *** Variables ***
-${BTN_REMOVE}                //android.view.ViewGroup[@content-desc="test-REMOVE"]
+${BTN_REMOVE}               //android.view.ViewGroup[@content-desc="test-REMOVE"]
 ${BTN_CONTINUE_SHOPPING}    //android.view.ViewGroup[@content-desc="test-CONTINUE SHOPPING"]
 ${BTN_CHECKOUT}             accessibility_id=test-CHECKOUT
 
